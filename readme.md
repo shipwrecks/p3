@@ -4,9 +4,10 @@
 http://p3.nearsightedninja.me
 
 ## Description
-A utility for generating lorem ipsum text, and a utility random user names.
-The amount of results is defined by user.  The random user names can also provide 
-address and/or profile information as defined by the user. 
+A utility for generating lorem ipsum text, and a utility for generating random 
+user names.  The amount of results is defined by user.  The random 
+user name generator can also provide address and/or profile information 
+as defined by the user. 
 
 ## Demo
 I will demo live during section.
