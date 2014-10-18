@@ -13,5 +13,29 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('index');
+});
+
+//display the lorem ipsum page
+Route::get('/lorem-ipsum', function()
+{
+	return View::make('lorem-ipsum');
+});
+
+//process the lorem ipsum page
+Route::post('/lorem-ipsum', function()
+{
+	return View::make('lorem-ipsum');
+});
+
+//display the user generator page
+Route::get('/user-gen', function()
+{
+	return View::make('user-gen');
+});
+
+//display the user generator page
+Route::post('/user-gen', function()
+{
+	return View::make('user-gen');
 });
