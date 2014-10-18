@@ -25,11 +25,11 @@ Route::get('/lorem-ipsum', function()
 //process the lorem ipsum page
 Route::post('/lorem-ipsumdone', function()
 {
-	//$numPara = Input::get('numPara');
-	//$generator = new LoremGenerator();
-    //$paragraphs = $generator->getParagraphs($numPara);
-    //echo implode('<p>', $paragraphs);
-	return View::make('lorem-ipsumdone');
+	$numPara = Input::get('numPara');
+	$generator = new Badcow\LoremIpsum\Generator();
+	$paragraphs = $generator->getParagraphs($numPara);
+	$lorem = implode('<p>', $paragraphs);
+	return View::make('lorem-ipsumdone')->with('lorem', $lorem);
 });
 
 //display the user generator page
@@ -42,4 +42,14 @@ Route::get('/user-gen', function()
 Route::post('/user-gen', function()
 {
 	return View::make('user-gen');
+});
+
+//below was just a random page where I was constantly testing code
+Route::get('/test', function()
+{
+	$numPara = 3;
+	$generator = new Badcow\LoremIpsum\Generator();
+	$paragraphs = $generator->getParagraphs($numPara);
+	$result = implode('<p>', $paragraphs);
+	return View::make('test')->with('result', $result);
 });
