@@ -23,9 +23,13 @@ Route::get('/lorem-ipsum', function()
 });
 
 //process the lorem ipsum page
-Route::post('/lorem-ipsum', function()
+Route::post('/lorem-ipsumdone', function()
 {
-	return View::make('lorem-ipsum');
+	//$numPara = Input::get('numPara');
+	//$generator = new LoremGenerator();
+    //$paragraphs = $generator->getParagraphs($numPara);
+    //echo implode('<p>', $paragraphs);
+	return View::make('lorem-ipsumdone');
 });
 
 //display the user generator page

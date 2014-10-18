@@ -6,12 +6,17 @@
 
 @section('content')
 <h2>Lorem Ipsum Generator</h2>
+<p><a href='/'>... Home</a></p>
 
 <p>How many paragraphs do you want?</p>
-<p><strong>Paragraphs:</strong> {{ Form::text('amount'); }} (Max is 99)</p>
+<p><strong>Paragraphs:</strong> 
+	{{ Form::open(array('url' => '/lorem-ipsumdone.php')) }}
+	{{ Form::text('numPara', null, array('maxlength' => '2')) }}
+	(Max is 99)</p>
 
-{{Form::submit('Generate!', array('class' => 'button'));}}
+	{{Form::submit('Generate!', array('class' => 'button'));}}
+	{{ Form::close() }}
 
-<p><a href='/'>Click here to go back</a></p>
+
  
 @stop

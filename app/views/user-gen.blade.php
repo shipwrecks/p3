@@ -6,6 +6,7 @@
 
 @section('content')
 <h2>User Generator</h2>
+<p><a href='/'>... Home</a></p>
 
 <p>How many users do you want?  Also check off if you want additional user
 information.</p>
