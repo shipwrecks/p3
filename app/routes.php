@@ -38,13 +38,20 @@ Route::get('/user-gen', function()
 	return View::make('user-gen');
 });
 
-//display the user generator page
-Route::post('/user-gen', function()
+//process the user generator page
+Route::post('/user-gendone', function()
 {
-	return View::make('user-gen');
+	$numUsers = Input::get('numUsers');
+	$address = Input::get('address');
+	$profile = Input::get('profile');
+	$faker = Faker\Factory::create();
+	return View::make('user-gendone')->with('faker', $faker)
+	->with('numUsers', $numUsers)
+	->with('address', $address)
+	->with('profile', $profile);
 });
 
-//below was just a random page where I was constantly testing code
+//below is just a random page where I was constantly testing code
 Route::get('/test', function()
 {
 	$numPara = 3;
