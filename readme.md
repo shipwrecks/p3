@@ -10,11 +10,13 @@ user name generator can also provide address and/or profile information
 as defined by the user. 
 
 ## Demo
-I will demo live during section.
+I have recorded a Jing cast.
+screencast.com/t/ZhpGWVZGgwS
 
 ## Details for teaching team
-No outside code was used.
+No special details on web page use.  
 
 ## Outside code
 https://packagist.org/packages/badcow/lorem-ipsum
+
 https://packagist.org/packages/fzaninotto/faker
